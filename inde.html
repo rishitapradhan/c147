@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene background="color:#000000">
+            <a-entity position="0 2 25">
+                <a-camera></a-camera>
+            </a-entity>
+            
+            <a-sky src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvia_lactea.png"></a-sky>
+            <!--sun-->
+            <a-entity >
+                <a-sphere position="0 0 -5"  src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg"></a-sphere>
+            </a-entity>
+            
+            <!--mercury-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:20000">
+                <a-sphere position="1 0 -5" radius="0.2" src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg" radius="0.2"></a-sphere>
+            </a-entity>
+
+            <!--venus-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:25000">
+                <a-sphere position="6 0 -5"  radius="0.3" src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvenus.jpg"></a-sphere>
+            </a-entity>
+
+            <!--earth-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:30000">
+                <a-sphere position="10.5 0 -5"  radius="0.4" src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fearth.jpg">
+                    <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:10000>
+                        <a-sphere color="yellow" position="2 0 0" radius="0.2">
+                        </a-sphere>
+                    </a-entity>
+                </a-sphere>
+            </a-entity>
+
+            <!--mars-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:35000">
+                <a-sphere position="13.5 0 -5"  radius="0.4" src="data:image/jpeg;base64,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"></a-sphere>
+            </a-entity>
+
+            <!--jupiter-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:40000">
+                <a-sphere position="21 0 -5" color= radius="1.2" src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fjupiter.jpg"></a-sphere>
+            </a-entity>
+
+            <!--saturn-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:45000">
+                <a-sphere position="26.5 0 -5" color= radius="0.9" src="https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsaturn.png"></a-sphere>
+            </a-entity>
+
+            <!--uranus-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:50000">
+                <a-sphere position="31 0 -5" color= radius="0.6" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Solarsystemscope_texture_2k_uranus.jpg"></a-sphere>
+            </a-entity>
+
+            <!--neptune-->
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur:55000">
+                <a-sphere position="36 0 -5" color= radius="0.2" src="https://cdna.artstation.com/p/marketplace/presentation_assets/000/781/102/large/file.jpg?1616459511"></a-sphere>
+            </a-entity>
+
+            <!--orbital path-->
+            <!--mercury orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--venus orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="7.8" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--earth orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="10.6" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+        
+            <!--mars orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="14.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--jupiter orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="21.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--saturn orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="26.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--uranus orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="21.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+            <!--neptune orbit-->
+            <a-torus color="grey" rotation="90 0 0" radius="36.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+
+        </a-scene>
+    </body>
+</html>
+
